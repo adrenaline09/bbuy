@@ -10,12 +10,12 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Catalogue"),
       ),
-        body: Center(
+      body: Center(
           child: Container(
             child: Text("Welcome to $days days flutter course with $name"),
           ),
         ),
-        drawer: Drawer(),
+      drawer: Drawer(),
       ) ;
   }
 }
