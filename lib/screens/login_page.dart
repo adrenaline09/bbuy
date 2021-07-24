@@ -43,6 +43,7 @@ movetoHome(BuildContext context) async{
               ),
               Text("Welcome $name",
               style: TextStyle(
+                color: Colors.deepOrange.shade900,
                 fontSize: 20,
                 fontWeight: FontWeight.bold
               ),
@@ -90,7 +91,7 @@ movetoHome(BuildContext context) async{
                   // child: Text("heu hue"),
                   ),
                   Material(  //inkwell ko material ancestor chahea for proper functioning
-                    color: Colors.deepPurple,
+                    color: Colors.black,
                     borderRadius: BorderRadius.circular(changeButton?50:8),
                    child: InkWell( //this widget is used to make container clickable
                        
@@ -106,7 +107,7 @@ movetoHome(BuildContext context) async{
                           "Login",
                           style: TextStyle
                           (
-                          color: Colors.white,
+                          color: Colors.deepOrange.shade900,
                           fontWeight: FontWeight.bold,
                           fontSize: 16
                           ),
