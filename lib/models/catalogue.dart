@@ -1,6 +1,18 @@
+class CatalogueModel{
+static final items = [Items(
+  id: 1,
+  name: "iPhone 12 pro",
+  description: " Apple iphone 12 pro 128 GB",
+  price: 80000,
+  color: "#33505a",
+  imgUrl: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-family-select-2021?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1617135051000"
+)];
+}
+
+
 class Items{
 
-  final String  id;
+  final num  id;
   final String  name;
   final String  description;
   final num     price;
@@ -10,13 +22,3 @@ class Items{
   Items({required this.id, required this.name, required this.description, required this.price, required this.color, required this.imgUrl});
 }
 
-final products = [Items(
-  id: "m001",
-  name: "iPhone 12 pro",
-  description: " Apple iphone 12 pro 6/128 gb variant",
-  price: 800,
-  color: "#33505a",
-  imgUrl: "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-3.jpg"
-)
-
-];
