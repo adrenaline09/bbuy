@@ -18,11 +18,11 @@ class ItemWidget extends StatelessWidget {
         subtitle: Text(item.description),
         
         trailing: Text(
-          "₹ ${item.price}",
+          "₹${item.price}",
           textScaleFactor: 1.5,
           style: TextStyle(
             color: Colors.deepPurple,
-            fontWeight: FontWeight.bold
+            
           ),
         ),  //getting error while loading network image ;3:58:12
       ),

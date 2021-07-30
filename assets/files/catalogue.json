@@ -1,0 +1,65 @@
+{
+    "products":[
+    {"id": 1,
+        "name": "iPhone 12 Pro",
+        "description": "Apple iphone 12 pro 128 GB",
+        "price": 80000,
+        "color": "#33505a",
+        "imgUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-family-select-2021?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1617135051000"
+    },
+
+    {"id": 2,
+        "name": "iPad Pro",
+        "description": "12.9 inch Apple iPad Pro",
+        "price":70000,
+        "color" :"#32505a",
+        "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-spacegray-202104?wid=940&hei=1112&fmt=p-jpg&qlt=95&.v=1617126621000"
+
+    },
+    {"id": 3,
+        "name": "Apple Pencil",
+        "description": "Pencil( 2nd generation )",
+        "price":20000,
+        "color" :"#32505a",
+        "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK0C2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1564075356758"
+
+    },
+    {"id": 4,
+        "name": "MacBook Air",
+        "description": "Apple MacBook Air M1 512 GB",
+        "price":117000,
+        "color" :"#32505a",
+        "imgUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1603332211000"
+    },
+    {"id": 5,
+        "name": "MacBook Pro",
+        "description": "Apple Macbook Pro M1 512 GB",
+        "price":142000,
+        "color" :"#32505a",
+        "imgUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_IN?wid=452&hei=420&fmt=jpeg&qlt=95&.v=1613672874000"
+    },
+    {"id": 6,
+        "name": "AirPods Pro",
+        "description": "Apple AirPods Pro 2021",
+        "price":25000,
+        "color" :"#32505a",
+        "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MWP22?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1591634795000"
+    },
+    {"id": 7,
+        "name": "AirPods Max",
+        "description": "Apple AirPods Max 2021",
+        "price":50000,
+        "color" :"#32505a",
+        "imgUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-silver-202011?wid=940&hei=1112&fmt=png-alpha&.v=1604021221000"
+    },
+    {"id": 8,
+        "name": "Apple Watch",
+        "description": "Apple Watch SE Sport Edition",
+        "price":30000,
+        "color" :"#32505a",
+        "imgUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MTP52_VW_34FR+watch-40-alum-silver-nc-se_VW_34FR_WF_CO?wid=700&hei=700&trim=1,0&fmt=p-jpg&qlt=95&.v=1566450008043,1623883744000"
+    }
+
+                
+]
+}

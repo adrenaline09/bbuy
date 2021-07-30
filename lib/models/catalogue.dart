@@ -1,5 +1,5 @@
 class CatalogueModel{
-static final items = [Items(
+static  List<Items> items = [Items(
   id: 1,
   name: "iPhone 12 pro",
   description: " Apple iphone 12 pro 128 GB",
@@ -20,5 +20,26 @@ class Items{
   final String  imgUrl;
 
   Items({required this.id, required this.name, required this.description, required this.price, required this.color, required this.imgUrl});
+
+  factory Items.fromJson(Map<String,dynamic> map){
+    return Items(id : map["id"],
+    name:        map["name"],
+    description: map["description"],
+    price:       map["price"],
+    color:       map["color"],
+    imgUrl:      map["imgUrl"]
+    );
+
+  }
+
+  toJson()=>{
+    "id":id,
+    "name":name,
+    "description":description,
+    "price":price,
+    "color":color,
+    "imgUrl":imgUrl
+  };
+
 }
 
