@@ -5,7 +5,7 @@ static  List<Items> items = [Items(
   description: " Apple iphone 12 pro 128 GB",
   price: 80000,
   color: "#33505a",
-  imgUrl: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-family-select-2021?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1617135051000"
+  imgUrl: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-blue-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343704000"
 )];
 }
 

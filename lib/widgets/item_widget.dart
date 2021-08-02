@@ -21,7 +21,7 @@ class ItemWidget extends StatelessWidget {
           "₹${item.price}",
           textScaleFactor: 1.5,
           style: TextStyle(
-            color: Colors.deepPurple,
+          color: Colors.deepPurple,
             
           ),
         ),  //getting error while loading network image ;3:58:12
