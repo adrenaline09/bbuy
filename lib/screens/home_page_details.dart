@@ -12,52 +12,54 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: MyTheme.creamColor,
-      bottomNavigationBar: Container(
-        color: MyTheme.darkBlue,
-        child: ButtonBar(
-                    alignment: MainAxisAlignment.spaceBetween,
-                    buttonPadding: Vx.mH0,
-                    children: [
-                      "₹${catalogue.price}".text.color(MyTheme.creamColor).semiBold.xl3.make(),
-                      ElevatedButton(
-                        onPressed: (){}, 
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(MyTheme.creamColor),
-                          shape: MaterialStateProperty.all(StadiumBorder())
-                        ),
-                        child: "Get".text.xl.color(MyTheme.darkBlue).make()).w20(context)
-                    ],
-                  ).p32(),
-      ),
-      body: SafeArea(
-        bottom: false,
-        child: Column(
-          children: [
-            Hero(
-              tag: Key(catalogue.id.toString()),
-              child: Image.network(catalogue.imgUrl).h40(context)
-            ).h40(context),
-            Expanded(
-              child: VxArc(
-                height: 35,
-                arcType: VxArcType.CONVEX,
-              edge: VxEdge.TOP,
-                child: Container(
-                color: MyTheme.darkBlue,
-                width: context.screenWidth,
-                child: Column(
-                  children: [
-                    catalogue.name.text.xl4.white.semiBold.make().py16(),
-                    catalogue.description.text.white.xl.textStyle(context.captionStyle).make(),
-                  ],
-                ).py32(),
-              ),
-              ))
-          ],
-        )
-      ),
+        appBar: AppBar(backgroundColor: Colors.transparent,),
+        
+        backgroundColor: MyTheme.creamColor,
+        bottomNavigationBar: Container(
+          color: MyTheme.darkBlue,
+          child: ButtonBar(
+                      alignment: MainAxisAlignment.spaceBetween,
+                      buttonPadding: Vx.mH0,
+                      children: [
+                        "₹${catalogue.price}".text.color(MyTheme.creamColor).semiBold.xl3.make(),
+                        ElevatedButton(
+                          onPressed: (){}, 
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(MyTheme.creamColor),
+                            shape: MaterialStateProperty.all(StadiumBorder())
+                          ),
+                          child: "Get".text.xl.color(MyTheme.darkBlue).make()).w20(context)
+                      ],
+                    ).p32(),
+        ),
+        body: SafeArea(
+            bottom: false,
+            child: Column(
+              children: [
+                Hero(
+                  tag: Key(catalogue.id.toString()),
+                  child: Image.network(catalogue.imgUrl).h40(context)
+                ).h40(context),
+                Expanded(
+                  child: VxArc(
+                    height: 35,
+                    arcType: VxArcType.CONVEX,
+                  edge: VxEdge.TOP,
+                    child: Container(
+                    color: MyTheme.darkBlue,
+                    width: context.screenWidth,
+                    child: Column(
+                      children: [
+                        catalogue.name.text.xl4.white.semiBold.make().py16(),
+                        catalogue.description.text.white.xl.textStyle(context.captionStyle).make(),
+                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo.".text.make().p16()
+                      ],
+                    ).py32(),
+                  ),
+                  ))
+              ],
+            )
+        ),
       
     );
   }
