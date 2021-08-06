@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
+
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_app_1/core/store.dart';
 import 'package:flutter_app_1/screens/cart_page.dart';
 import 'package:flutter_app_1/screens/home_page.dart';
 import 'package:flutter_app_1/screens/login_page.dart';
 import 'package:flutter_app_1/utils/routes.dart';
 import 'package:flutter_app_1/widgets/themes.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:velocity_x/velocity_x.dart';
+
 void main()
 {
-  runApp(myApp());  
+  runApp(VxState(
+    store: MyStore(),
+    child: myApp()));  
 }
 
 // ignore: camel_case_types

@@ -1,35 +1,31 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_app_1/core/store.dart';
 import 'package:flutter_app_1/models/cart_model.dart';
 import 'package:flutter_app_1/models/catalogue.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:velocity_x/velocity_x.dart';
 
-class AddToCart extends StatefulWidget {
+class AddToCart extends StatelessWidget {
   final Items catalogue;
-  const AddToCart({
+   AddToCart({
     Key? key,
     required this.catalogue,
   }) : super(key: key);
 
-  @override
-  _AddToCartState createState() => _AddToCartState();
-}
 
-class _AddToCartState extends State<AddToCart> {
-  final _cart = CartModel();
+  
   @override
   Widget build(BuildContext context) {
-     bool isInCart = _cart.items.contains(widget.catalogue);
+    VxState.listen(context,to: [AddMutation]);
+    final CartModel _cart = (VxState.store as MyStore).cart;
+     bool isInCart = _cart.items.contains(catalogue);
     return ElevatedButton(
       onPressed: (){
        
         if(!isInCart) {
-        isInCart = isInCart.toggle();
-        final _catalogue = CatalogueModel();
-        
-        _cart.catalogue = _catalogue;
-        _cart.add(widget.catalogue);
-        setState(() { });
+
+        AddMutation(catalogue);
       }          
       }, 
       style: ButtonStyle(

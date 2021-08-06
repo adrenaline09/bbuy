@@ -1,13 +1,10 @@
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_app_1/core/store.dart';
 import 'package:flutter_app_1/models/catalogue.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:velocity_x/velocity_x.dart';
 
 class CartModel{
-
-    static final cartModel = CartModel._internal();
-    
-    CartModel._internal();
-
-    factory CartModel() => cartModel; 
-
     late CatalogueModel _catalogue;
 
     final List<dynamic>  _itemIds = [];
@@ -28,13 +25,20 @@ class CartModel{
     // total price of cart
     num get totalPrice => items.fold(0, (total, current) => total+current.price);
 
-    // add items to cart
-    void add(Items item){
-      _itemIds.add(item.id);
-    }
     // remove items from cart
     void remove(Items item){
       _itemIds.remove(item.id);
     }
+
+}
+
+class AddMutation extends VxMutation<MyStore>{
+  final Items item;
+
+  AddMutation(this.item);
+  @override
+  perform() {
+ store.cart._itemIds.add(item.id);
+  }
 
 }

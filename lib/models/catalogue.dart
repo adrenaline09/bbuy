@@ -1,11 +1,5 @@
 class CatalogueModel{
 
-  static final catalogueModel = CatalogueModel._internal();
-    
-    CatalogueModel._internal();
-
-    factory CatalogueModel() => catalogueModel; 
-
 static  List<Items> items = [Items(
   id: 1,
   name: "iPhone 12 pro",

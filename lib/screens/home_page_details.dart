@@ -16,13 +16,13 @@ class ProductDetails extends StatelessWidget {
         
         backgroundColor: context.canvasColor,
         bottomNavigationBar: Container(
-          color: context.cardColor,
-          child: ButtonBar(
-                      alignment: MainAxisAlignment.spaceBetween,
-                      buttonPadding: Vx.mH0,
-                      children: [
-                        "₹${catalogue.price}".text.color(context.accentColor).semiBold.xl3.make(),
-                        AddToCart(catalogue: catalogue)
+            color: context.cardColor,
+            child: ButtonBar(
+                        alignment: MainAxisAlignment.spaceBetween,
+                        buttonPadding: Vx.mH0,
+                        children: [
+                          "₹${catalogue.price}".text.color(context.accentColor).semiBold.xl3.make(),
+                          AddToCart(catalogue: catalogue)
                       ],
                     ).p32(),
         ),
