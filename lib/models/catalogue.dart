@@ -1,4 +1,11 @@
 class CatalogueModel{
+
+  static final catalogueModel = CatalogueModel._internal();
+    
+    CatalogueModel._internal();
+
+    factory CatalogueModel() => catalogueModel; 
+
 static  List<Items> items = [Items(
   id: 1,
   name: "iPhone 12 pro",
@@ -8,10 +15,10 @@ static  List<Items> items = [Items(
   imgUrl: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-blue-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343704000"
 )];
     // get item by id
-    static Items getById(int id) => items.firstWhere((element) => element.id == id , orElse: null);
+    Items getById(int id) => items.firstWhere((element) => element.id == id , orElse: null);
     
     // get item by position
-    static Items getByPosition(int pos) => items[pos];
+    Items getByPosition(int pos) => items[pos];
 
 }
 
