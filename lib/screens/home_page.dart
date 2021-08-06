@@ -6,7 +6,6 @@ import 'package:flutter_app_1/models/catalogue.dart';
 import 'package:flutter_app_1/utils/routes.dart';
 import 'package:flutter_app_1/widgets/home_widgets/catalogue_header.dart';
 import 'package:flutter_app_1/widgets/home_widgets/catalogue_list.dart';
-import 'package:flutter_app_1/widgets/themes.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:velocity_x/velocity_x.dart';
 class Homepage extends StatefulWidget {

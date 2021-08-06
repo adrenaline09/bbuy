@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:velocity_x/velocity_x.dart';
 
 class MyTheme{
@@ -30,7 +31,11 @@ class MyTheme{
         color: Colors.black,
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.white),
-        textTheme: Theme.of(context).textTheme)
+        textTheme: Theme.of(context).textTheme.copyWith(
+          headline6: 
+          context.textTheme.headline6!.copyWith(color: Colors.white))
+            
+        )
   );
 
 

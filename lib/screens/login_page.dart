@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_1/utils/routes.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:velocity_x/velocity_x.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({ Key? key }) : super(key: key);

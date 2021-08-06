@@ -7,6 +7,12 @@ static  List<Items> items = [Items(
   color: "#33505a",
   imgUrl: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-blue-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343704000"
 )];
+    // get item by id
+    static Items getById(int id) => items.firstWhere((element) => element.id == id , orElse: null);
+    
+    // get item by position
+    static Items getByPosition(int pos) => items[pos];
+
 }
 
 

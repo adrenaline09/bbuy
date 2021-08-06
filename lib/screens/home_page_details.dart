@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_1/models/catalogue.dart';
-import 'package:flutter_app_1/widgets/themes.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:velocity_x/velocity_x.dart';
 
@@ -21,14 +20,14 @@ class ProductDetails extends StatelessWidget {
                       alignment: MainAxisAlignment.spaceBetween,
                       buttonPadding: Vx.mH0,
                       children: [
-                        "₹${catalogue.price}".text.color(MyTheme.creamColor).semiBold.xl3.make(),
+                        "₹${catalogue.price}".text.color(context.accentColor).semiBold.xl3.make(),
                         ElevatedButton(
                           onPressed: (){}, 
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
                             shape: MaterialStateProperty.all(StadiumBorder())
                           ),
-                          child: "Get".text.xl.color(MyTheme.darkBlue).make()).w20(context)
+                          child: "Get".text.xl.white.make()).w20(context)
                       ],
                     ).p32(),
         ),
