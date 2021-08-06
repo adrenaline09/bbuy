@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_1/utils/routes.dart';
-
+import 'package:velocity_x/velocity_x.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({ Key? key }) : super(key: key);
 
@@ -30,7 +30,7 @@ movetoHome(BuildContext context) async{
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,  //keepting the bg white coz img border shouldn't be visible
+      color: context.canvasColor,  //keepting the bg white coz img border shouldn't be visible
       child: SingleChildScrollView(   //this method is use to wrap column to avoid overflow on small screen and give scrolling effect
         child: Form(
           key: _formkey,
@@ -91,7 +91,7 @@ movetoHome(BuildContext context) async{
                   // child: Text("heu hue"),
                   ),
                   Material(  //inkwell ko material ancestor chahea for proper functioning
-                    color: Colors.black,
+                    color: context.theme.buttonColor,
                     borderRadius: BorderRadius.circular(changeButton?50:8),
                    child: InkWell( //this widget is used to make container clickable
                        

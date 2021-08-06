@@ -47,7 +47,7 @@ class CatalogueItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                catalogue.name.text.color(MyTheme.darkBlue).semiBold.make().py16(),
+                catalogue.name.text.color(context.accentColor).semiBold.make().py16(),
                 catalogue.description.text.textStyle(context.captionStyle).make(),
                 10.heightBox,
                 ButtonBar(
@@ -58,7 +58,7 @@ class CatalogueItem extends StatelessWidget {
                     ElevatedButton(
                       onPressed: (){}, 
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(MyTheme.darkBlue),
+                        backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
                         shape: MaterialStateProperty.all(StadiumBorder())
                       ),
                       child: "Get".text.make())
@@ -69,6 +69,6 @@ class CatalogueItem extends StatelessWidget {
           )
         ],
       )
-    ).white.roundedLg.square(150).make().py12();
+    ).color(context.cardColor).roundedLg.square(150).make().py12();
   }
 }

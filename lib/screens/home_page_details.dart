@@ -14,9 +14,9 @@ class ProductDetails extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(backgroundColor: Colors.transparent,),
         
-        backgroundColor: MyTheme.creamColor,
+        backgroundColor: context.canvasColor,
         bottomNavigationBar: Container(
-          color: MyTheme.darkBlue,
+          color: context.cardColor,
           child: ButtonBar(
                       alignment: MainAxisAlignment.spaceBetween,
                       buttonPadding: Vx.mH0,
@@ -25,7 +25,7 @@ class ProductDetails extends StatelessWidget {
                         ElevatedButton(
                           onPressed: (){}, 
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(MyTheme.creamColor),
+                            backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
                             shape: MaterialStateProperty.all(StadiumBorder())
                           ),
                           child: "Get".text.xl.color(MyTheme.darkBlue).make()).w20(context)
@@ -46,11 +46,11 @@ class ProductDetails extends StatelessWidget {
                     arcType: VxArcType.CONVEX,
                   edge: VxEdge.TOP,
                     child: Container(
-                    color: MyTheme.darkBlue,
+                    color: context.cardColor,
                     width: context.screenWidth,
                     child: Column(
                       children: [
-                        catalogue.name.text.xl4.white.semiBold.make().py16(),
+                        catalogue.name.text.xl4.color(context.accentColor).semiBold.make().py16(),
                         catalogue.description.text.white.xl.textStyle(context.captionStyle).make(),
                         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo.".text.make().p16()
                       ],
